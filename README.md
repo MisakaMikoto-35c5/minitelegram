@@ -6,6 +6,7 @@ Sample code:
 
 ```
 import minitelegram
+import time
 
 telegram_bot_api_configuration = {
     "telegram_host": "api.telegram.org",
@@ -29,6 +30,7 @@ updates_processer = minitelegram.telegram_updates.TelegramUpdates(minitg_registr
 while True:
     try:
         update_result = updates_processer.do_update()
+        time.sleep(1)
     except KeyboardInterrupt:
         break
 ```

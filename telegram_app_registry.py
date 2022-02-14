@@ -8,7 +8,7 @@ class TelegramAppRegistry:
 
     ALL_MESSAGE_HOOKS = []
     COMMAND_HOOKS = {}
-    COMMAND_REGEX = re.compile('^\\/[a-zA-Z\\_]+$')
+    COMMAND_REGEX = re.compile('^\\/[\\da-zA-Z\\_]+$')
 
     def __init__(self, config) -> None:
         self.LOGGER = self.default_logger
